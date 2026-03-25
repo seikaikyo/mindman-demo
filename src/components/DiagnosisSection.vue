@@ -1,46 +1,46 @@
 <script setup lang="ts">
 const painPoints = [
   {
-    icon: 'pi pi-users',
-    title: '排程與備料脫鉤',
-    desc: '排程部門專注產能分配，物料需求計畫、安全庫存、採購跟催缺乏系統化管理，工單與物料到位時間無法同步。',
-    metric: '流程缺口',
-    severity: 'error',
+    icon: 'pi pi-sync',
+    title: '排程與備料協作',
+    desc: '隨著 SKU 數量持續成長，排程與物料到位的同步需要更即時的系統支援，減輕人工協調的負擔。',
+    metric: '效率提升',
+    severity: 'info',
   },
   {
     icon: 'pi pi-calculator',
-    title: 'MRP 展料瓶頸',
-    desc: 'BOM 層數多、Lead Time 維護不完整，傳統 ERP 的 MRP 難以即時產出準確淨需求，計畫人員轉而依賴 Excel。',
-    metric: 'ERP 瓶頸',
-    severity: 'error',
+    title: 'MRP 精算輔助',
+    desc: 'BOM 層數多、品項持續擴增，系統化的 MRP 展料能協助團隊更快產出準確淨需求，減少人工核算時間。',
+    metric: '速度加倍',
+    severity: 'info',
   },
   {
-    icon: 'pi pi-stop-circle',
-    title: '產能利用率偏低',
-    desc: '300+ 台 CNC 產能充足，但缺料等待、頻繁換線、人員調度失衡，實際稼動率未達理想水準。',
-    metric: '多維度損失',
-    severity: 'warn',
+    icon: 'pi pi-chart-line',
+    title: '稼動率持續提升',
+    desc: '300+ 台 CNC 的排程組合複雜度極高。系統輔助全局排程，幫助現場減少換線等待，提高整體設備利用率。',
+    metric: '產能最大化',
+    severity: 'ok',
   },
   {
     icon: 'pi pi-box',
-    title: 'SKU 複雜度極高',
-    desc: '加工超過 10 萬種零組件，84,240 個自動倉儲儲位，日出貨品項龐大，人工管控超過負荷極限。',
-    metric: '100K+ SKU',
-    severity: 'warn',
+    title: '庫存結構優化',
+    desc: '84,240 個儲位的管理已有穩固基礎。進一步導入 ABC 分類與動態安全庫存，可在不斷料前提下釋放資金。',
+    metric: '資金活化',
+    severity: 'ok',
   },
   {
     icon: 'pi pi-tablet',
-    title: '現場數位落差',
-    desc: '資深職人不擅操作系統，報工準確率低；年輕人員會用系統但不懂產品判讀，形成惡性循環。',
-    metric: '人機斷層',
-    severity: 'warn',
+    title: '現場報工簡化',
+    desc: '資深職人的經驗是最大資產。透過條碼/RFID 簡化入出站操作，讓師傅專注在產品，系統自動處理數據。',
+    metric: '人機協作',
+    severity: 'info',
   },
   {
-    icon: 'pi pi-qrcode',
-    title: '報工自動化需求',
-    desc: '人工 key-in 的資料延遲和錯誤率隨 SKU 放大。RFID 掃描 + AOI 辨識可取代手動報工，數據即時準確。',
-    metric: '自動化解方',
-    severity: 'info',
+    icon: 'pi pi-eye',
+    title: '即時可視化',
+    desc: '將分散在各系統的生產數據整合到統一看板，讓管理層和現場都能即時掌握進度，減少溝通來回。',
+    metric: '資訊透明',
+    severity: 'ok',
   },
 ]
 </script>
@@ -49,8 +49,8 @@ const painPoints = [
   <section class="diagnosis section-fade">
     <div class="section-header">
       <span class="section-number">01</span>
-      <h2 class="section-title">現況診斷</h2>
-      <p class="section-desc">根據官網公開資訊，針對 HMLV 高混合低量製造場景推導的典型挑戰</p>
+      <h2 class="section-title">系統可協助的面向</h2>
+      <p class="section-desc">根據官網公開的製造規模，智慧系統可從以下面向協助現有團隊提升效率</p>
     </div>
     <div class="pain-grid">
       <div
@@ -134,6 +134,7 @@ const painPoints = [
 .pain-card--error { border-top: 3px solid var(--status-error); }
 .pain-card--warn { border-top: 3px solid var(--status-warn); }
 .pain-card--info { border-top: 3px solid var(--status-info); }
+.pain-card--ok { border-top: 3px solid var(--status-ok); }
 
 .pain-card__top {
   display: flex;
@@ -155,6 +156,7 @@ const painPoints = [
 .pain-card--error .pain-card__icon { background: rgba(239, 68, 68, 0.12); color: var(--status-error); }
 .pain-card--warn .pain-card__icon { background: rgba(245, 158, 11, 0.12); color: var(--status-warn); }
 .pain-card--info .pain-card__icon { background: rgba(59, 130, 246, 0.12); color: var(--status-info); }
+.pain-card--ok .pain-card__icon { background: rgba(34, 197, 94, 0.12); color: var(--status-ok); }
 
 .pain-card__metric {
   font-size: 0.65rem;

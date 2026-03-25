@@ -3,70 +3,70 @@ const FACTORY_URL = 'https://factory.dashai.dev'
 
 const solutions = [
   {
-    pain: 'MRP 展料失靈',
-    painIcon: 'pi pi-calculator',
+    need: 'BOM 核算加速',
+    needIcon: 'pi pi-calculator',
     module: 'MRP 淨需求計算',
-    moduleDesc: 'BOM 自動展開、扣除庫存和在途量、產出採購建議清單',
+    moduleDesc: '自動展開 BOM、扣除庫存和在途量、產出採購建議，減輕人工核算負擔',
     ai: '需求預測 AI',
     aiDesc: '庫存降 38%、準確率 92%',
     link: `${FACTORY_URL}/flow/planning`,
     linkLabel: 'Production Planning',
   },
   {
-    pain: '排程無全局優化',
-    painIcon: 'pi pi-calendar',
+    need: '排程效率提升',
+    needIcon: 'pi pi-calendar',
     module: 'APS + Finite Scheduler',
-    moduleDesc: '約束條件排程、產能負荷平衡、自動派工到最適產線',
+    moduleDesc: '約束條件排程、產能負荷平衡、輔助派工決策',
     ai: 'AI 排程最佳化',
     aiDesc: '規劃時間 -94%、稼動率 +24%',
     link: `${FACTORY_URL}/tv/scheduling`,
     linkLabel: 'War Room Scheduling',
   },
   {
-    pain: '產能利用率偏低',
-    painIcon: 'pi pi-stop-circle',
+    need: '稼動率即時掌握',
+    needIcon: 'pi pi-chart-line',
     module: 'MES 稼動監控',
-    moduleDesc: '工單即時追蹤、OEE 監控、停機原因分析',
+    moduleDesc: '工單即時追蹤、OEE 監控、停機原因分析，數據化支撐決策',
     ai: '預測性維護',
     aiDesc: '停機 -75%、MTBF +233%',
     link: `${FACTORY_URL}/tv/equipment`,
     linkLabel: 'War Room Equipment',
   },
   {
-    pain: '84,240 儲位管理',
-    painIcon: 'pi pi-warehouse',
-    module: 'WMS + AS/RS',
-    moduleDesc: '自動倉儲、儲位管理、揀貨路徑優化、準確率 99.9%',
+    need: '庫存結構優化',
+    needIcon: 'pi pi-warehouse',
+    module: 'WMS + ABC 動態庫存',
+    moduleDesc: '儲位管理、揀貨路徑優化。搭配 ABC 分類，在不斷料前提下降低庫存金額',
     ai: '庫存最佳化 AI',
     aiDesc: '持有成本 -35%、周轉 +75%',
     link: `${FACTORY_URL}/tv/warehouse`,
     linkLabel: 'War Room Warehouse',
   },
   {
-    pain: '供應商風險盲區',
-    painIcon: 'pi pi-truck',
+    need: '供應商協作',
+    needIcon: 'pi pi-truck',
     module: 'SRM + VMI',
-    moduleDesc: '供應商評鑑、自動補貨、交期追蹤、績效分析',
+    moduleDesc: '供應商評鑑、C 類物料自動補貨、交期追蹤，減少人工跟催',
     ai: '供應商風險預測',
     aiDesc: '提前 30 天預警、中斷 -75%',
     link: `${FACTORY_URL}/tv/supply`,
     linkLabel: 'War Room Supply',
   },
   {
-    pain: '訂單可視化不足',
-    painIcon: 'pi pi-eye-slash',
-    module: '訂單全程追蹤',
-    moduleDesc: '從接單到出貨 9 階段即時可視化，訂單關聯的工單、物料、品質、出貨狀態一目瞭然',
+    need: '訂單全程可視',
+    needIcon: 'pi pi-eye',
+    module: '訂單追蹤看板',
+    moduleDesc: '從接單到出貨 9 階段即時可視化，工單、物料、品質、出貨狀態一目瞭然',
     ai: '',
     aiDesc: '',
     link: `${FACTORY_URL}/tv/tracking`,
     linkLabel: 'War Room Tracking',
   },
   {
-    pain: '現場報工不準確',
-    painIcon: 'pi pi-tablet',
-    module: 'RFID 追蹤 + AOI 視覺辨識',
-    moduleDesc: '條碼/RFID 刷掃取代手動 key-in，AOI 自動辨識產品型號與品質。消除人員數位落差，讓入出站報工即時且準確。',
+    need: '現場報工簡化',
+    needIcon: 'pi pi-qrcode',
+    module: 'RFID + AOI 自動報工',
+    moduleDesc: '條碼/RFID 刷掃取代手動 key-in，讓師傅專注產品、系統自動處理數據',
     ai: 'AOI 自動檢測',
     aiDesc: '檢出率 99.2%、產能 +300%',
     link: `${FACTORY_URL}/flow/quality/ai`,
@@ -79,14 +79,14 @@ const solutions = [
   <section class="solutions section-fade">
     <div class="section-header">
       <span class="section-number">02</span>
-      <h2 class="section-title">痛點對應方案</h2>
-      <p class="section-desc">每個問題都有對應的系統模組 + AI 加值方案，點擊查看 Live Demo</p>
+      <h2 class="section-title">需求對應方案</h2>
+      <p class="section-desc">每個需求都有對應的系統模組 + AI 加值，點擊查看 Live Demo</p>
     </div>
     <div class="solution-list">
-      <div v-for="s in solutions" :key="s.pain" class="solution-row">
-        <div class="solution-pain">
-          <i :class="s.painIcon" />
-          <span>{{ s.pain }}</span>
+      <div v-for="s in solutions" :key="s.need" class="solution-row">
+        <div class="solution-need">
+          <i :class="s.needIcon" />
+          <span>{{ s.need }}</span>
         </div>
         <div class="solution-arrow">
           <i class="pi pi-arrow-right" />
@@ -169,16 +169,16 @@ const solutions = [
   box-shadow: var(--shadow-card);
 }
 
-.solution-pain {
+.solution-need {
   display: flex;
   align-items: center;
   gap: var(--sp-2);
   font-size: 0.85rem;
   font-weight: 600;
-  color: var(--status-error);
+  color: var(--brand);
 }
 
-.solution-pain i {
+.solution-need i {
   font-size: 1rem;
 }
 
@@ -257,7 +257,7 @@ const solutions = [
 
   .solution-arrow { display: none; }
 
-  .solution-pain {
+  .solution-need {
     padding-bottom: var(--sp-2);
     border-bottom: 1px solid var(--border);
   }

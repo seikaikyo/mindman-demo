@@ -9,7 +9,7 @@ const phases = [
     period: '第 1-3 月',
     title: '主數據校準',
     color: '#3b82f6',
-    tasks: ['BOM 準確率盤點與修正', 'Lead Time 校準', '安全庫存水位設定（A 類優先）', 'ERP MRP 參數調校'],
+    tasks: ['配合團隊盤點 BOM 準確率', 'Lead Time 校準', 'A 類品項安全庫存水位檢討', 'ERP MRP 參數調校'],
     kpi: 'BOM 準確率 > 95%',
   },
   {
@@ -17,7 +17,7 @@ const phases = [
     period: '第 4-6 月',
     title: 'MRP 連動上線',
     color: '#8b5cf6',
-    tasks: ['MRP 自動展料 + 淨需求計算', '採購建議自動產出', '缺料預警機制', '計畫與備料協作 SOP'],
+    tasks: ['MRP 自動展料輔助核算', '採購建議自動產出', '庫存水位預警機制', '排程-備料協作流程'],
     kpi: '缺料率 < 8%',
   },
   {
@@ -65,8 +65,8 @@ const roiResults = computed(() => {
   <section class="roadmap section-fade">
     <div class="section-header">
       <span class="section-number">04</span>
-      <h2 class="section-title">導入藍圖 + ROI 試算</h2>
-      <p class="section-desc">三階段漸進導入，每階段有明確 KPI 指標</p>
+      <h2 class="section-title">漸進式導入 + 效益試算</h2>
+      <p class="section-desc">配合現有團隊節奏，三階段逐步提升</p>
     </div>
 
     <!-- Roadmap Timeline -->
@@ -93,7 +93,7 @@ const roiResults = computed(() => {
         <i class="pi pi-calculator" />
         ROI 快速試算
       </h3>
-      <p class="roi-desc">調整金器目前的指標，即時計算改善效益（年化估算）</p>
+      <p class="roi-desc">輸入工廠現況指標，即時計算系統導入後的預估效益（年化估算）</p>
 
       <div class="roi-inputs">
         <div class="roi-input-group">
