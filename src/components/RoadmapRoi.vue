@@ -9,7 +9,7 @@ const phases = [
     period: '第 1-3 月',
     title: '主數據校準',
     color: '#3b82f6',
-    tasks: ['BOM 準確率盤點與修正', 'Lead Time 校準', '安全庫存水位設定（A 類優先）', '鼎新 MRP 參數調整'],
+    tasks: ['BOM 準確率盤點與修正', 'Lead Time 校準', '安全庫存水位設定（A 類優先）', 'ERP MRP 參數調校'],
     kpi: 'BOM 準確率 > 95%',
   },
   {
@@ -17,7 +17,7 @@ const phases = [
     period: '第 4-6 月',
     title: 'MRP 連動上線',
     color: '#8b5cf6',
-    tasks: ['MRP 自動展料 + 淨需求計算', '採購建議自動產出', '缺料預警機制', '生管-物控週會 SOP'],
+    tasks: ['MRP 自動展料 + 淨需求計算', '採購建議自動產出', '缺料預警機制', '計畫與備料協作 SOP'],
     kpi: '缺料率 < 8%',
   },
   {

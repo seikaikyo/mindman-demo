@@ -2,29 +2,29 @@
 const painPoints = [
   {
     icon: 'pi pi-users',
-    title: '無物控職能',
-    desc: '10 個生管負責排程，但沒有人系統性地管物料需求、安全庫存和採購跟催。排了工單，料卻沒到位。',
-    metric: '10 生管 / 0 物控',
+    title: '排程與備料脫鉤',
+    desc: 'HMLV 工廠的典型挑戰：排程部門專注產能分配，但物料需求計畫、安全庫存、採購跟催缺乏系統化管理，導致工單與物料到位時間無法同步。',
+    metric: '組織流程缺口',
     severity: 'error',
   },
   {
     icon: 'pi pi-calculator',
-    title: 'MRP 失靈',
-    desc: '鼎新 ERP 的 MRP 模組跟不上 HMLV 節奏。BOM 層數多、Lead Time 沒維護，展料結果不準，生管改用 Excel 手動排。',
-    metric: '鼎新 ERP 瓶頸',
+    title: 'MRP 展料瓶頸',
+    desc: '當 BOM 層數多、Lead Time 維護不完整時，傳統 ERP 的 MRP 模組難以即時產出準確的淨需求。計畫人員轉而依賴 Excel，系統形同虛設。',
+    metric: 'ERP 效能不足',
     severity: 'error',
   },
   {
     icon: 'pi pi-stop-circle',
-    title: '產線 idle',
-    desc: '300+ 台 CNC 和多條組裝線，有產能卻跑不起來。缺料等待 + 換線頻繁 + 排程沒有全局最佳化。',
-    metric: '多條線空轉',
+    title: '產能利用率偏低',
+    desc: '300+ 台 CNC 加工設備（官網數據），多條組裝線具備充足產能。但缺料等待、頻繁換線、排程缺乏全局優化，導致實際稼動率未達理想水準。',
+    metric: '設備稼動損失',
     severity: 'warn',
   },
   {
     icon: 'pi pi-box',
-    title: 'SKU 爆量',
-    desc: '10 萬種零件、84,240 個儲位、每天 1,000 種不重複品項出貨。靠人工 Excel 追料根本追不完。',
+    title: 'SKU 複雜度極高',
+    desc: '加工超過 10 萬種零組件（官網數據），84,240 個自動倉儲儲位。以此規模推估，每日出貨品項種類龐大，人工管控已超過負荷極限。',
     metric: '100K+ SKU',
     severity: 'warn',
   },
@@ -38,7 +38,7 @@ const painPoints = [
         <i class="pi pi-search" />
         現況診斷
       </h2>
-      <p class="section-desc">根據金器工業公開資訊與面談內容，識別四大核心痛點</p>
+      <p class="section-desc">根據金器工業官網公開資訊，針對 HMLV 高混合低量製造場景推導的典型挑戰</p>
     </div>
     <div class="pain-grid">
       <div

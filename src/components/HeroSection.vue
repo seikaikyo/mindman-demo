@@ -5,7 +5,7 @@ const stats = [
   { value: '97', label: '行銷國家' },
   { value: '100K+', label: '零件種類' },
   { value: '84,240', label: '倉儲儲位' },
-  { value: '1,000+', label: '日出貨品項' },
+  { value: '300+', label: 'CNC 設備' },
 ]
 </script>
 
@@ -15,7 +15,7 @@ const stats = [
     <h1 class="hero__title">
       <span class="hero__company">金器工業</span>
       <br />
-      智慧物控解決方案
+      智慧製造解決方案
     </h1>
     <p class="hero__subtitle">
       為 HMLV 高混合低量製造場景設計 / 搭配 AI 驅動的生產排程與物料管控

@@ -109,7 +109,7 @@ const statusLabels: Record<string, string> = {
         訂單全程追蹤
       </h2>
       <p class="section-desc">
-        從接單到出貨，9 個階段即時可視化。每天 1,000 張訂單，每張都追得到。
+        從接單到出貨，9 個階段即時可視化。不論日出貨品項數量多寡，每張訂單都能全程追蹤。
         <a :href="`${FACTORY_URL}/tv/tracking`" target="_blank" rel="noopener" class="warroom-link">
           <i class="pi pi-external-link" /> 開啟 War Room 全螢幕版
         </a>

@@ -23,7 +23,7 @@ const solutions = [
     linkLabel: 'War Room Scheduling',
   },
   {
-    pain: '產線 idle 空轉',
+    pain: '產能利用率偏低',
     painIcon: 'pi pi-stop-circle',
     module: 'MES 稼動監控',
     moduleDesc: '工單即時追蹤、OEE 監控、停機原因分析',
@@ -53,10 +53,10 @@ const solutions = [
     linkLabel: 'War Room Supply',
   },
   {
-    pain: '出貨追蹤黑箱',
+    pain: '訂單可視化不足',
     painIcon: 'pi pi-eye-slash',
     module: '訂單全程追蹤',
-    moduleDesc: '從訂單到出貨 9 階段即時可視化，每張訂單的工單、物料、品質、出貨一目瞭然',
+    moduleDesc: '從接單到出貨 9 階段即時可視化，訂單關聯的工單、物料、品質、出貨狀態一目瞭然',
     ai: '',
     aiDesc: '',
     link: `${FACTORY_URL}/tv/tracking`,

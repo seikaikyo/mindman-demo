@@ -31,7 +31,7 @@ const cards: DemoCard[] = [
   {
     title: 'War Room - 排程',
     desc: '產線排程甘特圖、負荷平衡、急單插單處理',
-    solves: '10 個生管各排各的',
+    solves: '排程缺乏全局優化',
     icon: 'pi pi-calendar',
     link: `${FACTORY_URL}/tv/scheduling`,
   },
@@ -45,7 +45,7 @@ const cards: DemoCard[] = [
   {
     title: 'War Room - 訂單追蹤',
     desc: '每張訂單的全程追蹤：工單、物料、品質、出貨',
-    solves: '1,000 種日出貨無法追蹤',
+    solves: '大量出貨品項缺乏可視化',
     icon: 'pi pi-map',
     link: `${FACTORY_URL}/tv/tracking`,
   },
