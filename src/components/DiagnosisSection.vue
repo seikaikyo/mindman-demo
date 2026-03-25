@@ -17,8 +17,8 @@ const painPoints = [
   {
     icon: 'pi pi-stop-circle',
     title: '產能利用率偏低',
-    desc: '300+ 台 CNC 加工設備（官網數據），多條組裝線具備充足產能。但缺料等待、頻繁換線、排程缺乏全局優化，導致實際稼動率未達理想水準。',
-    metric: '設備稼動損失',
+    desc: '300+ 台 CNC（官網數據），產能充足但利用率受多重因素影響：缺料等待、頻繁換線、人員調度失衡、現場對排程變更的適應成本。全局優化需要同時處理設備、人力和物料三個維度。',
+    metric: '設備 + 人力調度',
     severity: 'warn',
   },
   {
@@ -27,6 +27,20 @@ const painPoints = [
     desc: '加工超過 10 萬種零組件（官網數據），84,240 個自動倉儲儲位。以此規模推估，每日出貨品項種類龐大，人工管控已超過負荷極限。',
     metric: '100K+ SKU',
     severity: 'warn',
+  },
+  {
+    icon: 'pi pi-tablet',
+    title: '現場數位落差',
+    desc: '製造業數位轉型的經典困境：資深職人熟悉產品但不擅操作系統，入出站報工準確率低；年輕人員會用系統但缺乏產品判讀經驗，形成惡性循環。',
+    metric: '人機介面瓶頸',
+    severity: 'warn',
+  },
+  {
+    icon: 'pi pi-qrcode',
+    title: '報工自動化需求',
+    desc: '當報工依賴人工 key-in，資料延遲和錯誤率會隨 SKU 數量放大。RFID/條碼掃描 + AOI 視覺辨識可以取代手動報工，讓系統數據即時且準確。',
+    metric: '自動化取代人工',
+    severity: 'info',
   },
 ]
 </script>
@@ -93,10 +107,16 @@ const painPoints = [
 
 .pain-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: var(--sp-4);
-  max-width: 960px;
+  max-width: 1100px;
   margin: 0 auto;
+}
+
+@media (max-width: 1024px) {
+  .pain-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .pain-card {
@@ -142,6 +162,15 @@ const painPoints = [
 .pain-card--warn .pain-card__icon {
   background: rgba(245, 158, 11, 0.15);
   color: var(--status-warn);
+}
+
+.pain-card--info {
+  border-left: 3px solid var(--status-info);
+}
+
+.pain-card--info .pain-card__icon {
+  background: rgba(59, 130, 246, 0.15);
+  color: var(--status-info);
 }
 
 .pain-card__head {

@@ -62,6 +62,16 @@ const solutions = [
     link: `${FACTORY_URL}/tv/tracking`,
     linkLabel: 'War Room Tracking',
   },
+  {
+    pain: '現場報工不準確',
+    painIcon: 'pi pi-tablet',
+    module: 'RFID 追蹤 + AOI 視覺辨識',
+    moduleDesc: '條碼/RFID 刷掃取代手動 key-in，AOI 自動辨識產品型號與品質。消除人員數位落差，讓入出站報工即時且準確。',
+    ai: 'AOI 自動檢測',
+    aiDesc: '檢出率 99.2%、產能 +300%',
+    link: `${FACTORY_URL}/flow/quality/ai`,
+    linkLabel: 'AOI AI Demo',
+  },
 ]
 </script>
 
