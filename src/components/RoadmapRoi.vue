@@ -258,7 +258,7 @@ const roiResults = computed(() => {
 
 /* ROI Calculator */
 .roi-calc {
-  max-width: 700px;
+  max-width: 1000px;
   margin: 0 auto;
   background: var(--bg-card);
   border: 1px solid var(--border);
