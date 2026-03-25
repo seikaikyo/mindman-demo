@@ -12,11 +12,11 @@
   --text-secondary: #94a0b8;
   --text-muted: #6b7590;
 
-  /* Brand - MINDMAN blue */
+  /* Brand - industrial cyan */
   --brand: #00c8ff;
   --brand-dim: #0098c8;
   --brand-glow: rgba(0, 200, 255, 0.15);
-  --mindman-blue: #005bac;
+  --industry-blue: #005bac;
 
   /* Status */
   --status-ok: #22c55e;

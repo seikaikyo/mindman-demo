@@ -38,7 +38,7 @@ const cards: DemoCard[] = [
   {
     title: 'War Room - 倉儲',
     desc: '庫存水位、揀貨效率、儲位利用率即時監控',
-    solves: '84,240 儲位管不過來',
+    solves: '數萬儲位即時管控',
     icon: 'pi pi-warehouse',
     link: `${FACTORY_URL}/tv/warehouse`,
   },

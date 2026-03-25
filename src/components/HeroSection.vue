@@ -1,25 +1,25 @@
 <script setup lang="ts">
 const stats = [
-  { value: '1979', label: '成立年份', icon: 'pi pi-calendar' },
-  { value: '600+', label: '員工人數', icon: 'pi pi-users' },
-  { value: '97', label: '行銷國家', icon: 'pi pi-globe' },
+  { value: '600+', label: '員工規模', icon: 'pi pi-users' },
+  { value: '90+', label: '外銷國家', icon: 'pi pi-globe' },
   { value: '100K+', label: '零件種類', icon: 'pi pi-cog' },
-  { value: '84,240', label: '倉儲儲位', icon: 'pi pi-warehouse' },
+  { value: '80K+', label: '倉儲儲位', icon: 'pi pi-warehouse' },
   { value: '300+', label: 'CNC 設備', icon: 'pi pi-wrench' },
+  { value: '16', label: '服務產業', icon: 'pi pi-sitemap' },
 ]
 </script>
 
 <template>
   <section class="hero">
     <div class="hero__glow" />
-    <div class="hero__badge">MINDMAN x DashAI</div>
+    <div class="hero__badge">DashAI Case Study</div>
     <h1 class="hero__title">
-      <span class="hero__company">金器工業</span>
+      <span class="hero__company">空壓元件製造商</span>
       <br />
       智慧製造解決方案
     </h1>
     <p class="hero__subtitle">
-      為 HMLV 高混合低量製造場景設計<br class="hide-desktop" />
+      針對 HMLV 高混合低量的空壓自動化元件工廠<br class="hide-desktop" />
       搭配 AI 驅動的生產排程與物料管控
     </p>
     <div class="hero__stats">
@@ -29,7 +29,7 @@ const stats = [
         <span class="stat__label">{{ s.label }}</span>
       </div>
     </div>
-    <p class="hero__source">資料來源：mindman.com.tw 官方網站</p>
+    <p class="hero__source">模擬情境：以台灣某空壓元件龍頭廠的公開規模為基礎</p>
   </section>
 </template>
 

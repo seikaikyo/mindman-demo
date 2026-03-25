@@ -24,7 +24,7 @@ const painPoints = [
   {
     icon: 'pi pi-box',
     title: '庫存結構優化',
-    desc: '84,240 個儲位的管理已有穩固基礎。進一步導入 ABC 分類與動態安全庫存，可在不斷料前提下釋放資金。',
+    desc: '數萬個儲位的管理已有穩固基礎。進一步導入 ABC 分類與動態安全庫存，可在不斷料前提下釋放資金。',
     metric: '資金活化',
     severity: 'ok',
   },
@@ -50,7 +50,7 @@ const painPoints = [
     <div class="section-header">
       <span class="section-number">01</span>
       <h2 class="section-title">系統可協助的面向</h2>
-      <p class="section-desc">根據官網公開的製造規模，智慧系統可從以下面向協助現有團隊提升效率</p>
+      <p class="section-desc">針對空壓元件 HMLV 製造場景，智慧系統可從以下面向協助團隊提升效率</p>
     </div>
     <div class="pain-grid">
       <div
