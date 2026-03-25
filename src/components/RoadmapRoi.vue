@@ -64,10 +64,8 @@ const roiResults = computed(() => {
 <template>
   <section class="roadmap section-fade">
     <div class="section-header">
-      <h2 class="section-title">
-        <i class="pi pi-flag" />
-        導入藍圖 + ROI 試算
-      </h2>
+      <span class="section-number">04</span>
+      <h2 class="section-title">導入藍圖 + ROI 試算</h2>
       <p class="section-desc">三階段漸進導入，每階段有明確 KPI 指標</p>
     </div>
 
@@ -139,8 +137,7 @@ const roiResults = computed(() => {
 
 <style scoped>
 .roadmap {
-  padding: var(--sp-12) var(--sp-6);
-  border-top: 1px solid var(--border);
+  padding: var(--sp-16) var(--sp-6);
 }
 
 .section-header {
@@ -148,21 +145,27 @@ const roiResults = computed(() => {
   margin-bottom: var(--sp-8);
 }
 
+.section-number {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: var(--brand);
+  background: var(--brand-glow);
+  border-radius: var(--radius-sm);
+  padding: 2px 10px;
+  margin-bottom: var(--sp-3);
+}
+
 .section-title {
-  font-size: 1.6rem;
-  font-weight: 700;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: var(--sp-2);
+  font-size: 1.8rem;
+  font-weight: 800;
   margin-bottom: var(--sp-2);
 }
 
-.section-title i { color: var(--brand); }
-
 .section-desc {
   color: var(--text-secondary);
-  font-size: 0.9rem;
+  font-size: 0.88rem;
 }
 
 /* Timeline */

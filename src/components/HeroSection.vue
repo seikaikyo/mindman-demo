@@ -1,16 +1,17 @@
 <script setup lang="ts">
 const stats = [
-  { value: '1979', label: '成立年份' },
-  { value: '600+', label: '員工人數' },
-  { value: '97', label: '行銷國家' },
-  { value: '100K+', label: '零件種類' },
-  { value: '84,240', label: '倉儲儲位' },
-  { value: '300+', label: 'CNC 設備' },
+  { value: '1979', label: '成立年份', icon: 'pi pi-calendar' },
+  { value: '600+', label: '員工人數', icon: 'pi pi-users' },
+  { value: '97', label: '行銷國家', icon: 'pi pi-globe' },
+  { value: '100K+', label: '零件種類', icon: 'pi pi-cog' },
+  { value: '84,240', label: '倉儲儲位', icon: 'pi pi-warehouse' },
+  { value: '300+', label: 'CNC 設備', icon: 'pi pi-wrench' },
 ]
 </script>
 
 <template>
   <section class="hero">
+    <div class="hero__glow" />
     <div class="hero__badge">MINDMAN x DashAI</div>
     <h1 class="hero__title">
       <span class="hero__company">金器工業</span>
@@ -18,84 +19,134 @@ const stats = [
       智慧製造解決方案
     </h1>
     <p class="hero__subtitle">
-      為 HMLV 高混合低量製造場景設計 / 搭配 AI 驅動的生產排程與物料管控
+      為 HMLV 高混合低量製造場景設計<br class="hide-desktop" />
+      搭配 AI 驅動的生產排程與物料管控
     </p>
     <div class="hero__stats">
       <div v-for="s in stats" :key="s.label" class="stat">
+        <i :class="s.icon" class="stat__icon" />
         <span class="stat__value">{{ s.value }}</span>
         <span class="stat__label">{{ s.label }}</span>
       </div>
     </div>
+    <p class="hero__source">資料來源：mindman.com.tw 官方網站</p>
   </section>
 </template>
 
 <style scoped>
 .hero {
+  position: relative;
   text-align: center;
-  padding: var(--sp-16) var(--sp-6) var(--sp-12);
-  background: linear-gradient(180deg, rgba(0, 91, 172, 0.15) 0%, transparent 100%);
-  border-bottom: 1px solid var(--border);
+  padding: 80px var(--sp-6) var(--sp-12);
+  overflow: hidden;
+}
+
+.hero__glow {
+  position: absolute;
+  top: -120px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 400px;
+  background: radial-gradient(ellipse, rgba(0, 91, 172, 0.25) 0%, rgba(0, 200, 255, 0.08) 40%, transparent 70%);
+  pointer-events: none;
 }
 
 .hero__badge {
+  position: relative;
   display: inline-block;
-  font-size: 0.7rem;
+  font-size: 0.72rem;
   font-weight: 700;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--brand);
-  background: var(--brand-glow);
-  border: 1px solid rgba(0, 200, 255, 0.3);
+  background: rgba(0, 200, 255, 0.08);
+  border: 1px solid rgba(0, 200, 255, 0.25);
   border-radius: 100px;
-  padding: var(--sp-1) var(--sp-4);
-  margin-bottom: var(--sp-6);
+  padding: 6px 20px;
+  margin-bottom: var(--sp-8);
+  backdrop-filter: blur(4px);
 }
 
 .hero__title {
-  font-size: 2.8rem;
+  position: relative;
+  font-size: 3.2rem;
   font-weight: 800;
-  line-height: 1.2;
+  line-height: 1.15;
   margin-bottom: var(--sp-4);
+  letter-spacing: -0.02em;
 }
 
 .hero__company {
-  color: var(--brand);
+  background: linear-gradient(135deg, var(--brand) 0%, #60a5fa 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .hero__subtitle {
-  font-size: 1.05rem;
+  position: relative;
+  font-size: 1rem;
   color: var(--text-secondary);
-  max-width: 600px;
+  max-width: 520px;
   margin: 0 auto var(--sp-8);
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
+.hide-desktop { display: none; }
+
 .hero__stats {
-  display: flex;
-  justify-content: center;
-  gap: var(--sp-6);
-  flex-wrap: wrap;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: var(--sp-3);
+  max-width: 780px;
+  margin: 0 auto var(--sp-6);
 }
 
 .stat {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2px;
-  min-width: 80px;
+  gap: 4px;
+  padding: var(--sp-4) var(--sp-2);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  transition: all var(--transition);
+}
+
+.stat:hover {
+  border-color: var(--brand);
+  box-shadow: 0 0 16px rgba(0, 200, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.stat__icon {
+  font-size: 0.9rem;
+  color: var(--brand);
+  margin-bottom: 2px;
 }
 
 .stat__value {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: 800;
   color: var(--text-primary);
   font-variant-numeric: tabular-nums;
+  line-height: 1;
 }
 
 .stat__label {
-  font-size: 0.72rem;
+  font-size: 0.68rem;
   color: var(--text-muted);
   white-space: nowrap;
+}
+
+.hero__source {
+  position: relative;
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  opacity: 0.6;
 }
 
 @media (max-width: 768px) {
@@ -104,19 +155,17 @@ const stats = [
   }
 
   .hero__title {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
 
-  .hero__subtitle {
-    font-size: 0.9rem;
-  }
+  .hide-desktop { display: inline; }
 
   .hero__stats {
-    gap: var(--sp-4);
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .stat__value {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 }
 </style>

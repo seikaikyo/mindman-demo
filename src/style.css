@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;600;700;800&display=swap');
+
 :root {
   /* Background layers - dark factory theme */
   --bg-base: #080c12;
@@ -97,6 +99,11 @@ a:hover {
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb { background: var(--border-hover); border-radius: 3px; }
 
+/* Section divider */
+.section-fade + .section-fade {
+  border-top: 1px solid var(--border);
+}
+
 /* Fade-in animation for sections */
 .section-fade {
   opacity: 0;
@@ -108,3 +115,4 @@ a:hover {
   opacity: 1;
   transform: translateY(0);
 }
+

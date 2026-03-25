@@ -104,16 +104,14 @@ const statusLabels: Record<string, string> = {
 <template>
   <section class="trace section-fade">
     <div class="section-header">
-      <h2 class="section-title">
-        <i class="pi pi-map" />
-        訂單全程追蹤
-      </h2>
+      <span class="section-number">03</span>
+      <h2 class="section-title">訂單全程追蹤</h2>
       <p class="section-desc">
-        從接單到出貨，9 個階段即時可視化。不論日出貨品項數量多寡，每張訂單都能全程追蹤。
-        <a :href="`${FACTORY_URL}/tv/tracking`" target="_blank" rel="noopener" class="warroom-link">
-          <i class="pi pi-external-link" /> 開啟 War Room 全螢幕版
-        </a>
+        從接單到出貨，9 個階段即時可視化。每張訂單都能全程追蹤。
       </p>
+      <a :href="`${FACTORY_URL}/tv/tracking`" target="_blank" rel="noopener" class="warroom-link">
+        <i class="pi pi-external-link" /> War Room 全螢幕版
+      </a>
     </div>
 
     <div class="trace-panel">
@@ -176,8 +174,7 @@ const statusLabels: Record<string, string> = {
 
 <style scoped>
 .trace {
-  padding: var(--sp-12) var(--sp-6);
-  border-top: 1px solid var(--border);
+  padding: var(--sp-16) var(--sp-6);
 }
 
 .section-header {
@@ -185,30 +182,47 @@ const statusLabels: Record<string, string> = {
   margin-bottom: var(--sp-8);
 }
 
+.section-number {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: var(--brand);
+  background: var(--brand-glow);
+  border-radius: var(--radius-sm);
+  padding: 2px 10px;
+  margin-bottom: var(--sp-3);
+}
+
 .section-title {
-  font-size: 1.6rem;
-  font-weight: 700;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: var(--sp-2);
+  font-size: 1.8rem;
+  font-weight: 800;
   margin-bottom: var(--sp-2);
 }
 
-.section-title i { color: var(--brand); }
-
 .section-desc {
   color: var(--text-secondary);
-  font-size: 0.9rem;
+  font-size: 0.88rem;
+  max-width: 480px;
+  margin: 0 auto;
 }
 
 .warroom-link {
   display: inline-flex;
   align-items: center;
   gap: var(--sp-1);
-  margin-left: var(--sp-2);
   font-weight: 600;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
+  margin-top: var(--sp-3);
+  padding: 6px 16px;
+  border: 1px solid var(--brand);
+  border-radius: var(--radius-sm);
+  transition: all var(--transition);
+}
+
+.warroom-link:hover {
+  background: var(--brand-glow);
+  text-decoration: none;
 }
 
 .trace-panel {
